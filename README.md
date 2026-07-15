@@ -19,3 +19,18 @@ Traffic flow is inherently composed of two distinct components: a **steady compo
    - **Steady Stream**: Captures periodic diffusion through a *Time-Slot Memory Bank* and fused static graphs.
    - **Dynamic Stream**: Models incident-driven propagation via *Bilateral Modulation* on a global adaptive skeleton.
 3. **Layer-wise Multi-Order Graph Diffusion**: Aligns spatial propagation range with temporal receptive field depth without extra parameters.
+
+##🚀 Usage
+python train.py \
+    --device cuda:0 \
+    --data data/PEMS04-flow \
+    --adjdata data/PEMS04-flow \
+    --num_nodes 307 \
+    --in_dim 3 \
+    --seq_length 12 \
+    --batch_size 64 \
+    --epochs 50 \
+    --save ./garage/pems04
+
+##🙏 Acknowledgments
+This work builds upon the excellent Graph WaveNet codebase. We thank the authors for making their implementation publicly available.
