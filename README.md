@@ -4,7 +4,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.12-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-> Official implementation of **DSTG-Net**, a dual-stream decoupled spatio-temporal graph network for traffic flow forecasting.
+> Official implementation of **DSTG-Net**, a dual-stream decoupled spatio-temporal graph network for traffic flow forecasting. Hope this code is helpful for your research!
 
 ---
 
@@ -20,7 +20,13 @@ Traffic flow is inherently composed of two distinct components: a **steady compo
    - **Dynamic Stream**: Models incident-driven propagation via *Bilateral Modulation* on a global adaptive skeleton.
 3. **Layer-wise Multi-Order Graph Diffusion**: Aligns spatial propagation range with temporal receptive field depth without extra parameters.
 
-##🚀 Usage
+---
+
+## 🚀 Usage
+
+### Train
+
+```bash
 python train.py \
     --device cuda:0 \
     --data data/PEMS04-flow \
@@ -32,5 +38,6 @@ python train.py \
     --epochs 50 \
     --save ./garage/pems04
 
-##🙏 Acknowledgments
-This work builds upon the excellent Graph WaveNet codebase. We thank the authors for making their implementation publicly available.
+## 🙏 Acknowledgments
+
+This work is built upon the [Graph WaveNet](https://github.com/nnzhan/Graph-WaveNet) framework. We sincerely thank the authors for their excellent work and open-source contribution.
